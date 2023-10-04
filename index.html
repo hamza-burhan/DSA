@@ -1,0 +1,78 @@
+<html>
+    <body>
+        <h1>Array</h1>
+        <p>store data not in random but contigious memory<br>
+            size is assign on a compile times<br>
+        </p>
+        <h2>Array methods</h2>
+        <h4>push()</h4>
+        <h4>pop()</h4>
+        <h4>map(element, index) return new array </h4>
+        <h4>filter(element, index)</h4>
+            <p>it itterate over array and if we return true or condition true than it will push that element to new array</p>
+            <p id="filter"></p>
+        <h4>reduce(function(total,currentElement,currentIndex,arr), initial value)</h4>
+        <p>The reduce() method executes a reducer function for array element.<br>
+            The reduce() method returns a single value: the function's accumulated result.<br>
+            The reduce() method does not change the original array.<br>
+            1st parameter => total: initial value, OR previously return value<br>
+            2nd parameter => initial value will be added to the final value<br>
+            we use Reduce function when we want a single calculated value from an array<br>
+            if we provide initial value then first time currentIndex will be 0 if not provided then it start with 1<br>
+            also current Element will be first element
+        </p>
+        <p id="reduce"></p>
+        <h4>findIndex(testFunction(currentValue, index, arr), this value)</h4>
+        <p>
+            The findIndex() method returns the index (position) of the first element that passes a test.<br>
+            The findIndex() method returns -1 if no match is found.<br>
+            The findIndex() method does not execute the function for empty array elements.<br>
+            The findIndex() method does not change the original array<br>
+            if array has 2 same values it return the index of first find<br>
+            if we return something in return it consider it as true if its empty it consider false <br>
+        </p>
+        <p id="findIndexArr"></p>
+        <p id="findIndex"></p>
+
+
+
+
+
+
+
+        <h1>Binary Search</h1>
+        <p>
+            for binary search array must be in accending order<br>
+               1-itterative approach<br>
+                    a-divide array in 2 parts<br>
+                    b-take the middle element<br>
+                    c-if middle element is smaller then our element then it will search in right<br>
+                    d-if middle element is bigger then our element it will search left</p>
+        <h2 id="binary"></h2>
+        <br>
+        <h1>Binary Search Recursive approach</h1>
+        <p>
+            for binary search array must be in accending order<br>
+               1-Recursive approach<br>
+                    a-divide array in 2 parts<br>
+                    b-take the middle element<br>
+                    c-if middle element is smaller then our element then it will search in right<br>
+                    d-if middle element is bigger then our element it will search left<br>
+                    e-when we find our desire element we will return so the recursive will break
+                </p>
+        <h2 id="recursive"></h2>
+        <br>
+        <h1>Linear Search</h1>
+        <p>linear Search will run until the end of the loop and will find an element</p>
+        <h2 id="linear"></h2>
+        <br>
+        <h1>Bubble sort</h1>
+        <p>
+            a-in bubble sort there will be 2 nested loops<br>
+            b- loops will run NxN times<br>
+            c-swaping<br>
+        </p>
+        <h1 id="bubbleSort"></h1>
+        <script src="script.js"></script>
+    </body>
+</html>
