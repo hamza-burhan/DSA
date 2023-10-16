@@ -56,7 +56,7 @@
 // total = [1,2,1,2]
 // Second itteration
 // total = [1,2,1,2,3,4]
-// Third itteration 
+// Third itteration
 // total = [1,2,1,2,3,4,5,6]
 // document.getElementById("reduce").innerHTML = JSON.stringify(flatarray)
 
@@ -81,13 +81,7 @@
 // document.getElementById("reduce").innerHTML = JSON.stringify(sharpObjArr)
 
 
-// Find Index
-
-data = [1,3,2,4,5,6,6]
-stringArr = ['a','aa','aaa','aaaa','aaaaa']
-length = 2
-const value = data.findIndex(primeNumber)
-
+// !Find Index
 //Test functions
 // function testFunction(currentValue, index, arr){
 //     if(currentValue === 6){
@@ -111,26 +105,95 @@ const value = data.findIndex(primeNumber)
 //     if(stringLength > length) return index
 // }
 
-//Prime Number that can only divided by 1 or number itself and give a whole number 
-function primeNumber(currentValue,index, arr){
-    const number = currentValue / currentValue + 1    
-    console.log(typeof number)
-}
-
-document.getElementById("findIndexArr").innerHTML = JSON.stringify(data)
-document.getElementById("findIndex").innerHTML = value
-
-
+// !indexOf(value)
+//take the element of the array and return its index
+//not itterative
+// !find(ele,index,array)
+// this return a index of the element
+//itterative method
+// !findLastIndex(elem,index)
+//itterate reversly and return index
 
 
-
-
-
-
-
+// !slice(start,end)
+//it will cut the array from start to end
+// data = [1,2,3,4,5,6]
+// const newSliceArr = data.slice(1,4)
+// document.getElementById("slice").innerHTML = JSON.stringify(newSliceArr)
 
 
 
+// !splice(start index, delete count, ..insert items)
+// remove or insert or replace elements in an array at specific index
+// return removed elements
+// mutate original array
+// it include the start point as well
+// data =['item1', 'item2','item3','item4','item5']
+//insert
+// data.splice(1,0,'newitem1','newitem2')
+//delete
+// data.splice(1,2)
+//replace
+// data.splice(1,2,'newitem1','newitem2')
+//rotate an array
+// let poition = 3
+// const removeditems = data.splice(0,poition+1)
+// data.splice(0,0,removeditems)
+// document.getElementById("splice").innerHTML = JSON.stringify(data)
+
+
+
+// ! flatmap(callback(ele,index,arr))
+//it will map on the array and flatten the array
+//call back return the array so we can do calculation on every element
+// return new array
+// data = [12,11,21,1223]
+//test
+// const result = data.flatMap((ele,index,arr) => {
+//     return [ele,ele+ele]
+// })
+// Double and Square
+// const result = data.flatMap((ele,index,array) => {
+//     return [ele*ele]
+// }).concat(data.flatMap((ele,index,array) => {
+//     return [ele+ele]
+// }))
+// document.getElementById("flatmap").innerHTML = JSON.stringify(result)
+
+
+// !split(seperator)
+//will split the string and convert to array
+
+// !join(seperator)
+//will join the array into one string
+
+// !includes(value,start search from)
+//will search the array or string and return boolean base on the value provided
+
+// !some(callback(ele,index,arr))
+//some() is particularly useful when you need to quickly determine if a certain condition is met by any element
+//in an array, without having to iterate through the entire array manually.
+//return true or false if one element in the array pass the test of callback
+
+// !every(callback(ele,index,array))
+//every() is particularly useful when you need to quickly determine if a certain condition is met by every element
+//in an array, without having to iterate through the entire array manually.
+
+// ! sort(callback(a,b))
+//without comparison function it will sort the array in accesnding order
+//with comparison function it should return negetive or positive or zero
+// debugger
+// data = [10,9,8,7,6,5,4,3]
+// const result = data.sort((a,b) => {
+//     return a-b
+// })
+// console.log(result)
+// document.getElementById("sort").innerHTML = JSON.stringify(data)
+
+
+
+
+//Searching Algorithms
 
 // !Binary Search itterative approach
 // let data = [2,4,6,14,18,19,4,22,45]
@@ -152,7 +215,7 @@ document.getElementById("findIndex").innerHTML = value
 // }
 // document.getElementById("binary").innerHTML = position
 
-// !Binary Search Recursive approach
+// Binary Search Recursive approach
 // let Rdata = [10,23,43,44,77,78,100]
 // let Rstart = 0
 // let Rend = Rdata.length-1
@@ -198,7 +261,7 @@ document.getElementById("findIndex").innerHTML = value
 //         }
 //     }
 // }
-// let Btext = ''   
+// let Btext = ''
 // for(i=0;i<n;i++){
 //     text += data[i] + ','
 // }

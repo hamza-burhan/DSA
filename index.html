@@ -1,78 +1,192 @@
 <html>
-    <body>
-        <h1>Array</h1>
-        <p>store data not in random but contigious memory<br>
-            size is assign on a compile times<br>
-        </p>
-        <h2>Array methods</h2>
-        <h4>push()</h4>
-        <h4>pop()</h4>
-        <h4>map(element, index) return new array </h4>
-        <h4>filter(element, index)</h4>
-            <p>it itterate over array and if we return true or condition true than it will push that element to new array</p>
-            <p id="filter"></p>
-        <h4>reduce(function(total,currentElement,currentIndex,arr), initial value)</h4>
-        <p>The reduce() method executes a reducer function for array element.<br>
-            The reduce() method returns a single value: the function's accumulated result.<br>
-            The reduce() method does not change the original array.<br>
-            1st parameter => total: initial value, OR previously return value<br>
-            2nd parameter => initial value will be added to the final value<br>
-            we use Reduce function when we want a single calculated value from an array<br>
-            if we provide initial value then first time currentIndex will be 0 if not provided then it start with 1<br>
-            also current Element will be first element
-        </p>
-        <p id="reduce"></p>
-        <h4>findIndex(testFunction(currentValue, index, arr), this value)</h4>
-        <p>
-            The findIndex() method returns the index (position) of the first element that passes a test.<br>
-            The findIndex() method returns -1 if no match is found.<br>
-            The findIndex() method does not execute the function for empty array elements.<br>
-            The findIndex() method does not change the original array<br>
-            if array has 2 same values it return the index of first find<br>
-            if we return something in return it consider it as true if its empty it consider false <br>
-        </p>
-        <p id="findIndexArr"></p>
-        <p id="findIndex"></p>
+
+<body>
+    <h1>Array</h1>
+    <p>store data not in random but contigious memory<br>
+        size is assign on a compile times<br>
+    </p>
+    <h2>Array methods</h2>
+    <h4>push()</h4>
+    <h4>pop()</h4>
+    <h4>map(element, index) return new array </h4>
+    <h4>filter(element, index)</h4>
+    <p>it itterate over array and if we return true or condition true than it will push that element to new array</p>
+    <p id="filter"></p>
+    <h4>reduce(function(total,currentElement,currentIndex,arr), initial value)</h4>
+    <p>The reduce() method executes a reducer function for array element.<br>
+        The reduce() method returns a single value: the function's accumulated result.<br>
+        The reduce() method does not change the original array.<br>
+        1st parameter => total: initial value, OR previously return value<br>
+        2nd parameter => initial value will be added to the final value<br>
+        we use Reduce function when we want a single calculated value from an array<br>
+        if we provide initial value then first time currentIndex will be 0 if not provided then it start with 1<br>
+        also current Element will be first element
+    </p>
+    <p id="reduce"></p>
+    <h4>findIndex(testFunction(currentValue, index, arr), this value)</h4>
+    <p>
+        The findIndex() method returns the index (position) of the first element that passes a test.<br>
+        The findIndex() method returns -1 if no match is found.<br>
+        The findIndex() method does not execute the function for empty array elements.<br>
+        The findIndex() method does not change the original array<br>
+        if array has 2 same values it return the index of first find<br>
+        if we return something in return it consider it as true if its empty it consider false <br>
+    </p>
+    <p id="findIndexArr"></p>
+    <p id="findIndex"></p>
+    <h4>find(value)</h4>
+    <p>taakes an element and return its index not itterative</p>
+    <h4>indexof(ele,index,arr)</h4>
+    <p>itterative method return an index</p>
+    <h4>findLastIndex(element)</h4>
+    <p>find the last index of the element in an array and itterate reverse</p>
+    <h4>slice(start,end)</h4>
+    <p>it will cut the array from start to end <br>
+        if end is not provided then it will cut the array from start to the end<br>
+        end index element will not be cut off <br>
+        return new array<br>
+        works with both string and array
+    </p>
+    <p id="slice"></p>
+    <h4>splice(start,delete count, ...insert itesm)</h4>
+    <p>remove or insert or replace elements in an array at specific index <br>
+        return removed elements<br>
+        mutate original array
+    </p>
+    <p id="splice"></p>
+    <h4>Flatmap(callback(ele,index,arr))</h4>
+    <p>it will flatten the array and map function<br>
+        it will retunr new array<br>
+        call back return the array so we can do calculation on every element
+    </p>
+    <p id="flatmap"></p>
+    <h4>split(seperator)</h4>
+    <p>will split the string and convert to array</p>
+    <h4>join(seperator)</h4>
+    <p>will join the array into one string</p>
+    <h4>includes(value,start search from)</h4>
+    <p>will search the array or string and return boolean base on the value provided</p>
+    <h4>some(callback(ele,index,arr))</h4>
+    <p>some() is particularly useful when you need to quickly determine if a certain condition is met by<br>
+        any element in an array, without having to iterate through the entire array manually.<br>
+        return true or false if one element in the array pass the test of callback<br>
+    </p>
+    <h4>every(callback(ele,index,array))</h4>
+    <p>every() is particularly useful when you need to quickly determine if a certain condition is met<br>
+        by every element in an array, without having to iterate through the entire array manually.<br>
+    </p>
+    <h4>sort((a,b))</h4>
+    <p>
+        without comparison function it will sort the array in accesnding order<br>
+        with comparison function it should return negetive or positive or zero<br>
+    </p>
+    <p id="sort"></p>
+    <h4>reverse</h4>
+    <p>reverse the array of element</p>
+    <h4>shift()</h4>
+    <p>remove the first element of array</p>
+    <h4>unshift()</h4>
+    <p>add the element to the first index</p>
+
+
+
+
+
+    <h1>Time Complexity big O(n)</h1>
+    <p>The time algorithm takes to execute according to the inputs is called time complexity</p>
+    <h4>a- O(1) - Constant Time Complexity:</h4>
+    <p>algorithm that takes constant time no matter the size of input<br>
+        its the best case scenarion O(best)<br>
+        for exampel accesing an element of array it will have O(1) time complexity.
+    </p>
+    <h4>b- O(log n) - logarthmeic Time Complexity:</h4>
+    <p>the execution time increases logarithmically as the input size increases.<br>
+        efficient searching or dividing problems in half at each step.
+    </p>
+    <h4>c- O(n) linear time complexity</h4>
+    <p>the running time grows linearly with the size of the input.<br>
+        for exampel itterate over an arry and print all its elements
+    </p>
+    <h4>O(n^2) - Quadratic Time Complexity:</h4>
+    <p>an algorithm whos time complexity increase Quadraticly with the size of input<br>
+        for exampel nested loop algorithms
+    </p>
+    <h4>O(n!) - Factorial Time Complexity:</h4>
+    <p>an algorithm whos time complexity increase proptionaly with the size of input<br>
+        for exampel factorial algorithm<br>
+        This kind of time complexity is frequently seen in algorithms that generate every combination or
+        permutation of a set of components.
+    </p>
+    <h4>Time complexity of arrays</h4>
+    <p>
+        Access: O(1)<br>
+        Search: O(n)<br>
+        Insertion (at the end): O(1)<br>
+        Insertion (at the beginning or middle): O(n)<br>
+        Deletion (from the end): O(1)<br>
+        Deletion (from the beginning or middle): O(n)<br>
+    </p>
+
+
+
+
+    <h1>Space complexity S(n)</h1>
+    <p>Space complexity is the amount of memory used by the algorithm !auxilary space not included<br>
+        1-int mul, i<br>
+        2-While i <=n do<br>
+            3-mul <- mul * array[i]<br>
+                4-i <- i + 1<br>
+                    5-end while<br>
+                    6-return mul<br>
+                    Line 1 allocates memory space for two integers, resulting in S(n) = 4 bytes multiplied by 2 = 8
+                    bytes.<br>
+                    Line 2 represents a loop. Lines 3 and 4 assign a value to an already existing variable. As a
+                    result,<br>
+                    there is no need to set aside any space. The return statement in line 6 will allocate one more
+                    memory<br>
+                    case. As a result, S(n)= 4 times 2 + 4 = 12 bytes.
+    </p>
 
 
 
 
 
 
+    <h1>Search algorithms</h1>
+    <h2>Binary Search</h2>
+    <p>
+        for binary search array must be in accending order<br>
+        1-itterative approach<br>
+        a-divide array in 2 parts<br>
+        b-take the middle element<br>
+        c-if middle element is smaller then our element then it will search in right<br>
+        d-if middle element is bigger then our element it will search left</p>
+    <h2 id="binary"></h2>
+    <br>
+    <h2>Binary Search Recursive approach</h2>
+    <p>
+        for binary search array must be in accending order<br>
+        1-Recursive approach<br>
+        a-divide array in 2 parts<br>
+        b-take the middle element<br>
+        c-if middle element is smaller then our element then it will search in right<br>
+        d-if middle element is bigger then our element it will search left<br>
+        e-when we find our desire element we will return so the recursive will break
+    </p>
+    <h2 id="recursive"></h2>
+    <br>
+    <h2>Linear Search</h2>
+    <p>linear Search will run until the end of the loop and will find an element</p>
+    <h2 id="linear"></h2>
+    <br>
+    <h1>Bubble sort</h1>
+    <p>
+        a-in bubble sort there will be 2 nested loops<br>
+        b- loops will run NxN times<br>
+        c-swaping<br>
+    </p>
+    <h1 id="bubbleSort"></h1>
+    <script src="script.js"></script>
+</body>
 
-        <h1>Binary Search</h1>
-        <p>
-            for binary search array must be in accending order<br>
-               1-itterative approach<br>
-                    a-divide array in 2 parts<br>
-                    b-take the middle element<br>
-                    c-if middle element is smaller then our element then it will search in right<br>
-                    d-if middle element is bigger then our element it will search left</p>
-        <h2 id="binary"></h2>
-        <br>
-        <h1>Binary Search Recursive approach</h1>
-        <p>
-            for binary search array must be in accending order<br>
-               1-Recursive approach<br>
-                    a-divide array in 2 parts<br>
-                    b-take the middle element<br>
-                    c-if middle element is smaller then our element then it will search in right<br>
-                    d-if middle element is bigger then our element it will search left<br>
-                    e-when we find our desire element we will return so the recursive will break
-                </p>
-        <h2 id="recursive"></h2>
-        <br>
-        <h1>Linear Search</h1>
-        <p>linear Search will run until the end of the loop and will find an element</p>
-        <h2 id="linear"></h2>
-        <br>
-        <h1>Bubble sort</h1>
-        <p>
-            a-in bubble sort there will be 2 nested loops<br>
-            b- loops will run NxN times<br>
-            c-swaping<br>
-        </p>
-        <h1 id="bubbleSort"></h1>
-        <script src="script.js"></script>
-    </body>
 </html>
